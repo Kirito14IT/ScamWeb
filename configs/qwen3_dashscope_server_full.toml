@@ -1,0 +1,105 @@
+[experiment]
+name = "scammark-qwen3-dashscope-server-full"
+provider = "Crazyrouter + Alibaba Cloud Model Studio"
+provider_access_date = "2026-07-12"
+prompt_mode = "staged"
+seed = 2027
+allow_full_run = true
+expected_full_sample_count = 5658
+api_call_limit = 50000
+prediction_flush_interval = 25
+max_stage_attempts_across_resume = 6
+forced_diagnostics = true
+bootstrap_samples = 1000
+with_bertscore = false
+
+[models]
+text = "gpt-4o-mini"
+vision = "qwen3-vl-flash"
+temperature = 0
+enable_thinking = false
+
+[endpoints]
+text_provider = "Crazyrouter"
+vision_provider = "Alibaba Cloud Model Studio"
+text_base_url = "https://cn.crazyrouter.com/v1"
+vision_base_url = "env:SCAMMARK_VLM_BASE_URL"
+
+[input_tokens]
+url = 8192
+text = 8192
+visual = 4096
+cross = 4096
+binary = 4096
+type = 4096
+grounding = 4096
+
+[output_tokens]
+url = 512
+text = 768
+visual = 1024
+cross = 1024
+binary = 256
+type = 256
+grounding = 2048
+
+[timeouts]
+connect_seconds = 20
+llm_read_seconds = 120
+vlm_read_seconds = 300
+
+[retry]
+max_attempts = 4
+backoff_seconds = [2, 4, 8]
+full_jitter = true
+
+[images]
+overview_pixels = 1048576
+total_pixels = 8388608
+max_long_side = 7680
+max_tiles = 7
+overlap_ratio = 0.10
+max_base64_bytes = 10000000
+contact_sheet_pixels = 8388608
+contact_sheet_base64_bytes = 2500000
+
+[request_limits]
+max_visual_tokens = 8192
+max_multimodal_prompt_tokens = 12288
+max_total_request_bytes = 50000000
+
+[bertscore]
+model_revision = "c23d21b0620b635a76227c604d44e43a9f0ee389"
+num_layers = 17
+idf = false
+rescale_with_baseline = false
+batch_size = 4
+device = "cuda"
+
+[pricing]
+status = "published_rate_estimate"
+access_date = "2026-07-12"
+
+[pricing.text]
+currency = "USD"
+input_per_million = 0.10
+output_per_million = 0.42
+source = "https://crazyrouter.com/en/blog/openrouter-vs-crazyrouter-ai-api-router-comparison-2026"
+
+[pricing.vision]
+currency = "CNY"
+input_per_million = 0.15
+output_per_million = 1.50
+source = "https://help.aliyun.com/zh/model-studio/model-pricing"
+
+[data]
+manifest = "outputs/dataset_frozen_v1/scamweb_v_manifest.jsonl"
+web_evidence = "outputs/dataset_frozen_v1/web_evidence.jsonl"
+dataset_version = "outputs/dataset_frozen_v1/dataset_version.json"
+source_dataset_root = "D:/datasets/scamweb_dataset"
+runtime_dataset_root = "env:SCAMWEB_DATASET_ROOT"
+
+[paths]
+output_root = "outputs/scammark_qwen3_dashscope_server_full"
+image_cache = "outputs/scammark_qwen3_dashscope_server_full/image_cache"
+huggingface_cache = "models/huggingface"

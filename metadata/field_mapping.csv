@@ -1,0 +1,8 @@
+paper_field,authoritative_source,source_field,notes
+binary truth,derived frozen manifest,binary,Gold JSON presence defines scam; benign workbook/assets define benign.
+scam subtype,Gold JSON,label,Deterministic English alias normalization only.
+page rationale,Gold JSON,description,Workbook descriptions do not override JSON.
+page language,Gold JSON,language,"Reported as annotation metadata, including multilingual combinations."
+region boxes and reasons,Gold JSON,annotations[].center/size/description,Converted to pixel-space xyxy in the derived manifest.
+URL and title,Excel gold/benign sheets,"URL, TITLE","Used only for indexing and model input, not annotation truth."
+MHTML availability,frozen MHTML audit,"mhtml_audit_status, mhtml_used",Only valid and valid_redirect evidence is exposed to ScamMark.

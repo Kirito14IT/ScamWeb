@@ -1,0 +1,26 @@
+class_id,scam_type,support
+1,Task-Based Commission Scam,99
+2,E-commerce Customer Service Impersonation Scam,16
+3,Spoofed Login Page,38
+4,Online Loan Scam,18
+5,Online Investment Scam,330
+6,Cryptocurrency Investment Scam,793
+7,Government / Law Enforcement Impersonation Scam,9
+8,Romance Scam,21
+9,Fake Streaming Service Scam,29
+10,Online Shopping Scam,1089
+11,Technical Support Scam,154
+12,Gaming Item Trading Scam,87
+13,Online Gambling Scam,150
+14,Charity Scam,12
+15,Business Impersonation Scam,83
+16,Job / Recruitment Scam,14
+17,Lottery / Prize Scam,21
+18,Website Hijacking Scam,42
+19,Education / Training Scam,23
+20,Fraudulent Personal Website Scam,50
+21,Bank Impersonation Scam,36
+22,Fake News Website Scam,120
+23,Phishing,112
+24,Social Media Scam,55
+25,Sextortion,15

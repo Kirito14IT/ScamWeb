@@ -1,0 +1,64 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.codex/
+.superpowers/
+.worktrees/
+.venv/
+.venv-server
+.venv-bertscore-dgx/
+.container-home/
+venv/
+
+# Local/editor files
+.idea/
+.env
+.env.*
+!.env.example
+!*.env.example
+src/.env
+src/.env.*
+!src/*.env.example
+*.tmp
+*.bak
+~$*
+
+# Large or regenerated run outputs
+cache/
+runs/
+checkpoints/
+models/
+outputs
+reports/
+dist
+artifacts/
+
+# Machine-local dataset path override
+src/data/datasets_path.txt
+
+# Guardrails against accidentally committing the raw external dataset
+data/raw/
+raw_data/
+dataset_scam/
+dataset_benign/
+scamweb_dataset/
+*.mhtml
+*.mht

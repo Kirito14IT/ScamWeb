@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scamweb-v"
+version = "0.1.0"
+description = "ScamWeb benchmark tooling and the staged ScamMark multimodal pipeline"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = [
+  "web-scam-detection",
+  "multimodal-learning",
+  "visual-grounding",
+  "benchmark",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Security",
+]
+dependencies = [
+  "httpx==0.28.1",
+  "ImageHash>=4.3,<5",
+  "openai>=1.109,<3",
+  "openpyxl==3.1.5",
+  "Pillow>=12,<13",
+  "playwright>=1.55,<2",
+  "rapidfuzz>=3.14,<4",
+  "scipy==1.17.1",
+  "tiktoken>=0.12,<1",
+  "tldextract>=5.3,<6",
+]
+
+[project.optional-dependencies]
+evaluation = [
+  "bert-score==0.3.13",
+  "huggingface-hub==0.36.0",
+  "krippendorff==0.8.2",
+  "sentencepiece==0.2.1",
+  "transformers==4.57.6",
+]
+baselines = [
+  "numpy==2.5.1",
+  "scikit-learn==1.9.0",
+  "transformers==4.57.6",
+  "xgboost==3.3.0",
+]
+
+[project.scripts]
+scammark-audit = "scammark.audit_mhtml:main"
+scammark-baseline = "scammark.run_baselines:main"
+scammark-evaluate = "scammark.evaluate:main"
+scammark-prepare-eval = "scammark.prepare_eval_assets:main"
+scammark-run = "scammark.run_experiment:main"
+
+[project.urls]
+Repository = "https://github.com/Kirito14IT/ScamWeb"
+Issues = "https://github.com/Kirito14IT/ScamWeb/issues"
+Dataset = "https://huggingface.co/datasets/kirco567/ScamWeb-Dataset"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["scammark*", "data*"]
