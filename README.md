@@ -13,6 +13,7 @@
   </p>
 
   <p>
+    <a href="https://kirito14it.github.io/ScamWeb/"><img src="https://img.shields.io/badge/Project-Page-E4002B.svg" alt="ScamWeb project page"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.12-1463E6.svg?logo=python&amp;logoColor=white" alt="Python 3.12"></a>
     <a href="https://huggingface.co/datasets/kirco567/ScamWeb-Dataset"><img src="https://img.shields.io/badge/Hugging_Face-Dataset-FFD21E.svg?logo=huggingface&amp;logoColor=black" alt="ScamWeb dataset on Hugging Face"></a>
     <a href="LICENSE"><img src="https://img.shields.io/badge/Code-Apache--2.0-138A72.svg" alt="Apache 2.0 code license"></a>
@@ -21,6 +22,8 @@
   </p>
 
   <p>
+    <a href="https://kirito14it.github.io/ScamWeb/"><strong>Project Page</strong></a>
+    &nbsp;&middot;&nbsp;
     <a href="https://github.com/Kirito14IT/ScamWeb"><strong>GitHub</strong></a>
     &nbsp;&middot;&nbsp;
     <a href="https://huggingface.co/datasets/kirco567/ScamWeb-Dataset"><strong>Hugging Face Dataset</strong></a>
